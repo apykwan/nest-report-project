@@ -1,0 +1,51 @@
+### Create a new User
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "test3@test.com",
+    "password": "12345"
+}
+
+### Signin a new User
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "test3@test.com",
+    "password": "12345"
+}
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### signed out current user
+POST http://localhost:3000/auth/signout
+
+### Find a particular user with a given ID
+GET http://localhost:3000/auth/7
+
+### List all users
+GET http://localhost:3000/auth/
+
+### Find all users with a given email
+GET http://localhost:3000/auth?email=test2@test.com
+
+### Delete an user with a given ID
+DELETE http://localhost:3000/auth/9
+
+### Update an user 
+PATCH http://localhost:3000/auth/173
+content-type: application/json
+
+{
+    "email": "test17@test.com",
+    "password": "dasfasdfasdf"
+}
+
+
+### set a color
+GET http://localhost:3000/auth/colors/red
+
+### Get the color
+GET http://localhost:3000/auth/colors/
