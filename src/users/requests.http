@@ -35,12 +35,12 @@ GET http://localhost:3000/auth?email=test2@test.com
 DELETE http://localhost:3000/auth/9
 
 ### Update an user 
-PATCH http://localhost:3000/auth/173
+PATCH http://localhost:3000/auth/1
 content-type: application/json
 
 {
-    "email": "test17@test.com",
-    "password": "dasfasdfasdf"
+    "email": "test3@test.com",
+    "password": "12345"
 }
 
 

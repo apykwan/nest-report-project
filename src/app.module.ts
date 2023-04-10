@@ -41,11 +41,13 @@ import { Report } from './reports/report.entity';
   ],
 })
 export class AppModule {
+  constructor(private configService: ConfigService){}
+
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(
         cookieSession({
-          keys: ['_fj3_2+X0^']
+          keys: [this.configService.get('COOKIE_KEY')]
         })
       )
       .forRoutes('*');
